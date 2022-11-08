@@ -1,0 +1,19 @@
+{
+  "name": "@okey573/awesome-fe-utils",
+  "version": "0.0.5",
+  "description": "front end utils",
+  "main": "./dist/index.js",
+  "author": "krf",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "deploy": "npm publish --access public"
+  },
+  "devDependencies": {
+    "rollup": "^3.2.5"
+  }
+}
