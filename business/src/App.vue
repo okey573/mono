@@ -1,9 +1,9 @@
 <script setup>
-  import { delay } from '@okey573/awesome-fe-utils'
+  import { delay, version } from '@okey573/awesome-fe-utils'
 
   const testF = async () => {
     await delay(300)
-    console.log('end')
+    console.log(version)
   }
 </script>
 

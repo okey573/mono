@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@okey573/awesome-fe-utils": "^0.0.4",
+    "@okey573/awesome-fe-utils": "*",
     "vue": "^3.2.41"
   },
   "devDependencies": {
