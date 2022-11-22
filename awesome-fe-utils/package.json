@@ -12,7 +12,7 @@
   "types": "dist/",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "npm run clean && rollup --config rollup.config.ts --configPlugin typescript2",
+    "build": "pnpm run clean && rollup --config rollup.config.ts --configPlugin typescript2",
     "deploy": "npm publish --access public"
   },
   "devDependencies": {

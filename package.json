@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build:utils && npm run dev -w business",
-    "build:utils": "npm run build -w awesome-fe-utils",
+    "dev": "pnpm run -C business dev",
+    "build:utils": "pnpm run -C awesome-fe-utils build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
