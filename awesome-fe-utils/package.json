@@ -1,6 +1,6 @@
 {
   "name": "@okey573/awesome-fe-utils",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "front end utils",
   "main": "./dist/index.js",
   "author": "krf",
