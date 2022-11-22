@@ -1,0 +1,16 @@
+{
+  "exclude": [
+    "rollup.config.ts"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  }
+}
