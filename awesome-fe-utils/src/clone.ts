@@ -33,7 +33,6 @@ const cloneString: ReturnSelfTypeFunction<string> = function (o) {
 const clone = function <T>(o: T): T {
   // TODO 未完成
   const type = typeOf(o)
-  return o
   switch (type) {
     case 'Boolean':
       return cloneBoolean(o as boolean) as T
