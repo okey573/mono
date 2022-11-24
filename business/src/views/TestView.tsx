@@ -24,7 +24,7 @@ export default defineComponent({
     }
 
     return () => <>
-      <el-button onClick={ testFn }>I am ElButton</el-button>
+      <el-button onClick={ testFn }>I am test button</el-button>
     </>
   }
 })
