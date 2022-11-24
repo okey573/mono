@@ -19,12 +19,12 @@ export default defineComponent({
 
     const testFn = async () => {
       await delay(300)
-      console.log(`utils version => ${ version }`)
+      console.log(`utils version => ${version}`)
       obj.a1 = { b1: 'test' }
     }
 
     return () => <>
-      <el-button onClick={ testFn }>I am test button</el-button>
+      <el-button onClick={testFn}>I am test button</el-button>
     </>
   }
 })

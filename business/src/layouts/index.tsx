@@ -11,8 +11,6 @@ const Layout = defineComponent({
     Magnet
   },
   setup() {
-
-
     const isCollapse = ref(false)
     const activePath = ref<string>('/')
 
@@ -38,7 +36,7 @@ const Layout = defineComponent({
           }}>
             <span>
                  相关链接
-                 <el-icon style={{'margin-left': '10px'}}>
+                 <el-icon style={{ 'margin-left': '10px' }}>
                    <arrow-down />
                  </el-icon>
                </span>
@@ -50,19 +48,19 @@ const Layout = defineComponent({
         <div class="side-menu">
           <el-menu
             class="el-menu-vertical-demo"
-            default-active={ activePath.value }
+            default-active={activePath.value}
             router
-            collapse={ isCollapse.value }
+            collapse={isCollapse.value}
           >
-            <el-menu-item index="/views/test" v-slots={ {
+            <el-menu-item index="/views/test" v-slots={{
               title: () => <span>测试</span>
-            } }>
+            }}>
               <el-icon><Magnet /></el-icon>
             </el-menu-item>
 
-            <el-menu-item index="/views/profitAndLoss" v-slots={ {
+            <el-menu-item index="/views/profitAndLoss" v-slots={{
               title: () => <span>盈亏板</span>
-            } }>
+            }}>
               <el-icon>
                 <icon-menu />
               </el-icon>
