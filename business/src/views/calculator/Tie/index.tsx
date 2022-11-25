@@ -1,7 +1,7 @@
 import { defineComponent, ref, watch } from 'vue'
 
 import './index.scss'
-import Games from '@/views/odds/Calculator/components/Games'
+import Games from '@/views/calculator/Tie/components/Games'
 
 function cartesian(games: Array<Array<SingleGameResult>>): Array<Array<SingleGameResult>> {
   return games.reduce((previous, current) => {
@@ -19,7 +19,7 @@ function cartesian(games: Array<Array<SingleGameResult>>): Array<Array<SingleGam
   }, [] as Array<Array<SingleGameResult>>)
 }
 
-const Calculator = defineComponent({
+const Tie = defineComponent({
   setup() {
     // TODO 怎么声明类型
     const gamesRef = ref()
@@ -88,4 +88,4 @@ const Calculator = defineComponent({
   }
 })
 
-export default Calculator
+export default Tie

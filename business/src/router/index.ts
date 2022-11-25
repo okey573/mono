@@ -17,11 +17,17 @@ const router = createRouter({
           path: 'test',
           name: 'test',
           component: () => import('@/views/TestView')
-        },
+        }
+      ]
+    },
+    {
+      path: '/calculator',
+      component: Layout,
+      children: [
         {
-          path: 'calculator',
-          name: 'calculator',
-          component: () => import('@/views/odds/Calculator')
+          path: 'tie',
+          name: 'tie',
+          component: () => import('@/views/calculator/Tie')
         }
       ]
     }
