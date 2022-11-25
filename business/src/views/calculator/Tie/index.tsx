@@ -3,9 +3,9 @@ import { defineComponent, ref, watch } from 'vue'
 import './index.scss'
 import Games from '@/views/calculator/Tie/components/Games'
 
-type SingleGameResult = Score.SingleGameResult
-type Game = Score.Game
-type GameResult = Score.GameResult
+type SingleGameResult = Tie.SingleGameResult
+type Game = Tie.Game
+type GameResult = Tie.GameResult
 
 function cartesian(games: Array<Array<SingleGameResult>>): Array<Array<SingleGameResult>> {
   return games.reduce((previous, current) => {

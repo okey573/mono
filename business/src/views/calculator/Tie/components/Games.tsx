@@ -2,7 +2,7 @@ import { computed, defineComponent, reactive } from 'vue'
 
 import './Games.scss'
 
-type Game = Score.Game
+type Game = Tie.Game
 
 const Games = defineComponent({
   name: 'Games',
