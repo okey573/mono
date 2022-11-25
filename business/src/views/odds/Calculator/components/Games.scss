@@ -1,0 +1,46 @@
+.games {
+  min-width: 500px;
+  max-width: 800px;
+
+  .games-table {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 20%);
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+
+    > div {
+      border-radius: 3px;
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .edit-cell {
+      line-height: 40px;
+    }
+
+    .add-game-btn {
+      grid-column-start: 1;
+      grid-column-end: 6;
+      cursor: pointer;
+    }
+
+    .add-game-btn:hover {
+      background-color: #c6e2ff;
+    }
+
+    [contenteditable] {
+      outline: 1px solid transparent;
+      width: 100%;
+    }
+
+    [contenteditable]:focus {
+      border: 1px solid #dcdfe6;
+      border-radius: 3px;
+    }
+  }
+}

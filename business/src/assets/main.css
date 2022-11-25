@@ -1,7 +1,10 @@
 @import './base.css';
 
+html, body, #app {
+  height: 100%;
+}
+
 #app {
-  height: 100vh;
   margin: 0 auto;
   font-weight: normal;
 }

@@ -58,8 +58,8 @@ const Layout = defineComponent({
               <el-icon><Magnet /></el-icon>
             </el-menu-item>
 
-            <el-menu-item index="/views/profitAndLoss" v-slots={{
-              title: () => <span>盈亏板</span>
+            <el-menu-item index="/views/calculator" v-slots={{
+              title: () => <span>计算器</span>
             }}>
               <el-icon>
                 <icon-menu />

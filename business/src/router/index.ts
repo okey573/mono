@@ -19,9 +19,9 @@ const router = createRouter({
           component: () => import('@/views/TestView')
         },
         {
-          path: 'profitAndLoss',
-          name: 'profitAndLoss',
-          component: () => import('@/views/ProfitAndLoss')
+          path: 'calculator',
+          name: 'calculator',
+          component: () => import('@/views/odds/Calculator')
         }
       ]
     }

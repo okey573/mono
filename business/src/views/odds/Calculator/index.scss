@@ -1,0 +1,15 @@
+.calculator {
+  display: grid;
+  place-items: center;
+
+  .result-table, .overview {
+    margin-top: 20px;
+  }
+
+  .overview {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    width: 100%;
+  }
+}
