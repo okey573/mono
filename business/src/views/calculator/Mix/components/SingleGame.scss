@@ -1,9 +1,16 @@
 .single-game {
   display: flex;
-  height: 70px;
+  margin-top: 20px;
+  height: 80px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  > div {
+    flex-shrink: 0;
+  }
 
   .head-column, .tail-column {
-    width: 200px;
+    width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,11 +18,40 @@
     font-weight: bold;
   }
 
-  .head-column{
-    margin-right: 20px;
+  .head-column {
+    .del-btn {
+      border: none;
+      color: #ff4d51;
+    }
+
+    .el-input__wrapper {
+      box-shadow: none;
+    }
+
+    .vs_flag {
+      font-size: 14px;
+      color: #999999;
+    }
   }
 
   .tail-column {
     width: 60px;
   }
+}
+
+.single-game::-webkit-scrollbar {
+  width: 20px;
+  height: 2px;
+}
+
+.single-game::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  background: #8f8f8f;
+}
+
+.single-game::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ededed;
 }

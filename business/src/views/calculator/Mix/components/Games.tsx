@@ -10,7 +10,7 @@ const Games = defineComponent({
   // TODO emits怎么添加类型
   emits: ['calculate'],
 
-  setup(props, { emit }) {
+  setup(props, { emit, expose }) {
     const games = reactive<Array<Game>>([])
 
     const addGame = () => {
@@ -21,21 +21,21 @@ const Games = defineComponent({
       })
     }
 
-    const start = () => {
-      emit('calculate', games)
+    const deleteGame = (index: number) => {
+      games.splice(index, 1)
     }
+
+    expose({
+      games,
+      addGame
+    })
 
     return () => <div class="games">
       {
-        games.map(game => <>
-          <SingleGame game={game} />
-          <hr/>
+        games.map((game, index) => <>
+          <SingleGame key={Symbol(index)} game={game} onDeleteGame={() => deleteGame(index)} />
         </>)
       }
-      <div class="buttons">
-        <el-button class="add-button" type="primary" onClick={addGame}> 添加比赛</el-button>
-        <el-button class="calculate-button" type="success" onClick={start}> 计算结果</el-button>
-      </div>
     </div>
   }
 })

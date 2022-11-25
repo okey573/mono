@@ -1,4 +1,87 @@
 .mix {
+  .game-types {
+    background-color: #f2f2f2;
+    position: fixed;
+    width: 100px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px #dcdfe6 solid;
+
+    .game-types-radio-group {
+      display: flex;
+      flex-flow: column;
+      justify-content: start;
+      align-content: start;
+      height: 100%;
+
+      .game-types-radio {
+        flex: 1;
+        width: 100%;
+        margin: 20px 0 20px 10px;
+
+        .el-radio__label {
+          color: #333333;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .page-content {
+    background-color: #ffffff;
+    position: fixed;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    &__toolbar {
+      background-color: #f8f8f8;
+      position: fixed;
+      top: 0;
+      left: 100px;
+      right: 0;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px #dcdfe6 solid;
+      box-shadow: 0 2px 4px #999999;
+    }
+
+    &__content {
+      position: fixed;
+      top: 60px;
+      left: 100px;
+      right: 0;
+      bottom: 100px;
+      overflow-y: scroll;
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      .result-table {
+        position: sticky;
+        top : 60px ;
+      }
+    }
+
+    &__status {
+      position: fixed;
+      left: 100px;
+      right: 0;
+      bottom: 0;
+      height: 100px;
+      background-color: rgba(0, 0, 0, .1);
+      filter: drop-shadow( 0px 40px 20px rgba(0, 0, 0, 0.5))
+    }
+
+    &__content::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   .overview {
     padding-left: 4px;
     font-size: 14px;
