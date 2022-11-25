@@ -3,6 +3,10 @@ import { defineComponent, ref, watch } from 'vue'
 import './index.scss'
 import Games from '@/views/calculator/Tie/components/Games'
 
+type SingleGameResult = Score.SingleGameResult
+type Game = Score.Game
+type GameResult = Score.GameResult
+
 function cartesian(games: Array<Array<SingleGameResult>>): Array<Array<SingleGameResult>> {
   return games.reduce((previous, current) => {
     let result: Array<Array<SingleGameResult>> = []
@@ -79,7 +83,8 @@ const Tie = defineComponent({
           width="180"
           align="center"
           v-slots={{
-            default: (scope: any) => <span style={{color: scope.row.profit > 0 ? 'red' : 'green'}}>{scope.row.profit.toFixed(2)}</span>
+            default: (scope: any) =>
+              <span style={{ color: scope.row.profit > 0 ? 'red' : 'green' }}>{scope.row.profit.toFixed(2)}</span>
           }}
         >
         </el-table-column>

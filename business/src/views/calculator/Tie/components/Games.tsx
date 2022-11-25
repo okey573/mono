@@ -2,6 +2,8 @@ import { computed, defineComponent, reactive } from 'vue'
 
 import './Games.scss'
 
+type Game = Score.Game
+
 const Games = defineComponent({
   name: 'Games',
   setup(props, { expose }) {
