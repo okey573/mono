@@ -52,7 +52,7 @@ const Tie = defineComponent({
       })
     }
 
-    return () => <div class="calculator">
+    return () => <div class="tie">
       <Games ref={gamesRef} />
 
       <el-button type="primary" onClick={() => doCalculator(gamesRef.value?.games)} class="calculator-btn">
