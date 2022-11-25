@@ -7,7 +7,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      redirect: '/views/test',
+      // redirect: '/views/test',
+      component: () => import('@/views/calculator/Mix')
     },
     {
       path: '/views',
@@ -28,6 +29,11 @@ const router = createRouter({
           path: 'tie',
           name: 'tie',
           component: () => import('@/views/calculator/Tie')
+        },
+        {
+          path: 'mix',
+          name: 'mix',
+          component: () => import('@/views/calculator/Mix')
         }
       ]
     }

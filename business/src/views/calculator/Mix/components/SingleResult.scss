@@ -1,0 +1,15 @@
+.single-result {
+  &-cell {
+    display: block;
+    width: 100px;
+    height: 34px;
+  }
+
+  &-cell:not(:first-child) {
+    margin-top: 1px;
+  }
+}
+
+.single-result:not(:first-child) {
+  margin-left: 1px;
+}

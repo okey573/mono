@@ -65,6 +65,15 @@ const Layout = defineComponent({
                 <icon-menu />
               </el-icon>
             </el-menu-item>
+
+            <el-menu-item index="/calculator/mix" v-slots={{
+              title: () => <span>自定义</span>
+            }}>
+              <el-icon>
+                <icon-menu />
+              </el-icon>
+            </el-menu-item>
+
           </el-menu>
         </div>
 

@@ -1,0 +1,21 @@
+.single-game {
+  display: flex;
+  height: 70px;
+
+  .head-column, .tail-column {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .head-column{
+    margin-right: 20px;
+  }
+
+  .tail-column {
+    width: 60px;
+  }
+}

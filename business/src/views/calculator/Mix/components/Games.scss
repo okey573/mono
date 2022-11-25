@@ -1,0 +1,19 @@
+.games {
+  .buttons {
+    margin: 20px 0;
+    text-align: center;
+
+    .add-button, .calculate-button {
+      width: 200px;
+      margin-right: 20px;
+    }
+  }
+
+  hr {
+    background-color: #dcdfe6;
+    color: #dcdfe6;
+    height: 1px;
+    border: none;
+    margin: 20px 0;
+  }
+}
