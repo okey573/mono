@@ -243,7 +243,7 @@ const Tie = defineComponent({
                   <br />
 
                   中奖的概率为<BoldSpan v-slots={{ default: () => statusOverview.value.winPrizeRatio }} />，其中：
-                  <BoldSpan v-slots={{ default: () => statusOverview.value.profitCombinations }} />种盈利,
+                  <BoldSpan v-slots={{ default: () => statusOverview.value.profitCombinations }} />种盈利，
                   <BoldSpan v-slots={{ default: () => statusOverview.value.lossCombinations }} />种盈亏
                   <br />
 
@@ -261,7 +261,7 @@ const Tie = defineComponent({
                   <br />
 
                   其中：
-                  <BoldSpan v-slots={{ default: () => statusOverview.value.profitCombinations }} />种盈利,
+                  <BoldSpan v-slots={{ default: () => statusOverview.value.profitCombinations }} />种盈利，
                   <BoldSpan v-slots={{ default: () => statusOverview.value.lossCombinations }} />种盈亏
                   <br />
 
