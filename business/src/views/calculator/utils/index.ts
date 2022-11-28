@@ -1,5 +1,5 @@
 export function cartesian(games: Array<Array<any>>): Array<Array<any>> {
-  return games.reduce((previous, current) => {
+  return games.reverse().reduce((previous, current) => {
     let result: Array<Array<any>> = []
     current.forEach(c => {
       if (previous.length) {
