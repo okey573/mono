@@ -1,3 +1,4 @@
+import type { PropType } from 'vue'
 import { Plus, CloseBold } from '@element-plus/icons-vue'
 
 import SingleResult from '@/views/calculator/Mix/components/SingleResult'
@@ -41,7 +42,7 @@ const SingleGame = defineComponent({
         <span class="vs_flag">：</span>
       </div>
       {
-        game.results.map(result => <SingleResult result={result} />)
+        game.results.map((result: Result) => <SingleResult result={result} />)
       }
       <div class="tail-column">
         <el-button icon={Plus} circle onClick={addResult} />
