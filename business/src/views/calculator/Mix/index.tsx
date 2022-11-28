@@ -167,7 +167,7 @@ const Tie = defineComponent({
         </div>
         <div class="page-content__content">
           <Games ref={gameRef} />
-          <el-table data={result.value} border class="result-table">
+          <el-table class="result-table" border stripe data={result.value}>
             {
               gamesColumns.value.map((item, index) =>
                 <el-table-column
