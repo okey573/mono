@@ -4,7 +4,7 @@ export function cartesian(games: Array<Array<any>>): Array<Array<any>> {
     current.forEach(c => {
       if (previous.length) {
         previous.forEach(a => {
-          result.push(a.concat(c))
+          result.push([c].concat(a))
         })
       } else {
         result.push([c])
