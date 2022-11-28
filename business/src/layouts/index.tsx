@@ -1,4 +1,3 @@
-import { defineComponent, ref } from 'vue'
 import { Menu as IconMenu, ArrowDown, Magnet } from '@element-plus/icons-vue'
 
 import './index.scss'

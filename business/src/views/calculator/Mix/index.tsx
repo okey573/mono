@@ -1,8 +1,3 @@
-import { defineComponent, ref } from 'vue'
-import { ElMessage } from 'element-plus'
-import 'element-plus/es/components/message/style/css'
-
-
 import { cartesian } from '@/views/calculator/utils'
 import './index.scss'
 import Games from '@/views/calculator/Mix/components/Games'

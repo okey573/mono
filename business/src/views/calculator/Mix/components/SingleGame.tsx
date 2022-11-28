@@ -1,5 +1,3 @@
-import { defineComponent } from 'vue'
-import type { PropType } from 'vue'
 import { Plus, CloseBold } from '@element-plus/icons-vue'
 
 import SingleResult from '@/views/calculator/Mix/components/SingleResult'

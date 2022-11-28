@@ -1,5 +1,3 @@
-import { defineComponent, ref, watch } from 'vue'
-
 import './index.scss'
 import Games from '@/views/calculator/Tie/components/Games'
 

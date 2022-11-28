@@ -1,4 +1,3 @@
-import { defineComponent, reactive, watch } from 'vue'
 import { delay, version } from '@okey573/awesome-fe-utils'
 
 export default defineComponent({

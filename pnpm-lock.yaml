@@ -26,6 +26,7 @@ importers:
       '@element-plus/icons-vue': ^2.0.10
       '@okey573/awesome-fe-utils': workspace:*
       '@rushstack/eslint-patch': ^1.1.4
+      '@types/mockjs': ^1.0.7
       '@types/node': ^16.11.68
       '@vitejs/plugin-vue': ^3.1.2
       '@vitejs/plugin-vue-jsx': ^2.0.1
@@ -35,6 +36,7 @@ importers:
       element-plus: ^2.2.22
       eslint: ^8.22.0
       eslint-plugin-vue: ^9.3.0
+      mockjs: ^1.1.0
       npm-run-all: ^4.1.5
       pinia: ^2.0.23
       prettier: ^2.7.1
@@ -55,6 +57,7 @@ importers:
       vue-router: 4.1.6_vue@3.2.45
     devDependencies:
       '@rushstack/eslint-patch': 1.2.0
+      '@types/mockjs': 1.0.7
       '@types/node': 16.18.3
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.4+vue@3.2.45
       '@vitejs/plugin-vue-jsx': 2.1.1_vite@3.2.4+vue@3.2.45
@@ -63,6 +66,7 @@ importers:
       '@vue/tsconfig': 0.1.3_@types+node@16.18.3
       eslint: 8.28.0
       eslint-plugin-vue: 9.7.0_eslint@8.28.0
+      mockjs: 1.1.0
       npm-run-all: 4.1.5
       prettier: 2.7.1
       sass: 1.56.1
@@ -578,6 +582,10 @@ packages:
   /@types/lodash/4.14.190:
     resolution: {integrity: sha512-5iJ3FBJBvQHQ8sFhEhJfjUP+G+LalhavTkYyrAYqz5MEJG+erSv0k9KJLb6q7++17Lafk1scaTIFXcMJlwK8Mw==}
     dev: false
+
+  /@types/mockjs/1.0.7:
+    resolution: {integrity: sha512-OCxXz6hEaJOVpRwuJMiVY5a6LtJcih+br9gwB/Q8ooOBikvk5FpBQ31OlNimXo3EqKha1Z7PFBni+q9m+8NCWg==}
+    dev: true
 
   /@types/node/16.18.3:
     resolution: {integrity: sha512-jh6m0QUhIRcZpNv7Z/rpN+ZWXOicUUQbSoWks7Htkbb9IjFQj4kzcX/xFCkjstCj5flMsN8FiSvt+q+Tcs4Llg==}
@@ -1133,6 +1141,11 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    dev: true
+
+  /commander/9.4.1:
+    resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
+    engines: {node: ^12.20.0 || >=14}
     dev: true
 
   /commondir/1.0.1:
@@ -2289,6 +2302,13 @@ packages:
       pathe: 1.0.0
       pkg-types: 1.0.1
       ufo: 1.0.0
+    dev: true
+
+  /mockjs/1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
+    hasBin: true
+    dependencies:
+      commander: 9.4.1
     dev: true
 
   /ms/2.1.2:

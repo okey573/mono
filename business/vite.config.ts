@@ -14,9 +14,41 @@ export default defineConfig({
     vue(),
     vueJsx(),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: "sass",
+        }),
+      ],
+      dts: true,
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/, // .md
+      ],
+      vueTemplate: true,
+      imports: [
+        "vue",
+        "vue-router",
+        "vue/macros",
+        {
+          'vue-router': [
+            ['createRouter', 'createRouter'],
+            ['createWebHistory', 'createWebHistory'],
+          ]
+        },
+        {
+          'pinia': [
+            ['createPinia', 'createPinia'],
+            ['defineStore', 'defineStore'],
+          ]
+        }
+      ],
     }),
     Components({
+      dts: true,
+      extensions: ['vue', 'tsx'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.tsx$/, /\.tsx\?tsx/, ],
       resolvers: [ElementPlusResolver()],
     })
   ],

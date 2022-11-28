@@ -1,4 +1,3 @@
-import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
 
 import './SingleResult.scss'

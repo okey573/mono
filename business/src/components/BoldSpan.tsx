@@ -1,5 +1,3 @@
-import { defineComponent } from 'vue'
-
 const BoldSpan = defineComponent({
   name: 'BoldSpan',
   setup(props, { slots }) {

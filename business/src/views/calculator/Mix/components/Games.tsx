@@ -1,4 +1,4 @@
-import { defineComponent, reactive } from 'vue'
+// import { mock, Random } from 'mockjs'
 
 import './Games.scss'
 import SingleGame from '@/views/calculator/Mix/components/SingleGame'
@@ -14,6 +14,14 @@ const Games = defineComponent({
     const games = reactive<Array<Game>>([])
 
     const addGame = () => {
+      // games.push(mock({
+      //   home: Random.cword(2, 5),
+      //   guest: Random.cword(2, 5),
+      //   'results|2-4': [{
+      //     title: () => Random.string(2, 4),
+      //     odds: () => Random.float(1, 10, 0, 2)
+      //   }]
+      // }))
       games.push({
         home: '',
         guest: '',
