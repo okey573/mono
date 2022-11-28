@@ -63,7 +63,7 @@
 
       .result-table {
         position: sticky;
-        top : 60px ;
+        top: 60px;
       }
     }
 
@@ -74,7 +74,7 @@
       bottom: 0;
       height: 100px;
       background-color: rgba(0, 0, 0, .1);
-      filter: drop-shadow( 0px 40px 20px rgba(0, 0, 0, 0.5))
+      filter: drop-shadow(0px 40px 20px rgba(0, 0, 0, 0.5))
     }
 
     &__content::-webkit-scrollbar {

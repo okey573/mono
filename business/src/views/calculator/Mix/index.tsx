@@ -10,43 +10,10 @@ import BoldSpan from '@/components/BoldSpan'
 import { percentage } from '@/utils'
 
 type Game = Mix.Game
-
-interface ResultRow {
-  title: string,
-  odds: number
-  game: Omit<Game, 'results'>
-}
-
-type Column = {
-  label: string,
-  prop: string
-}
-type Row = {
-  bonus: number,
-  profit: number,
-  [key: string]: string | number
-}
-type Status = Partial<{
-  gameType: string
-  // 比赛场数
-  gamesLength: number,
-  // 全部的组合数
-  entireCombinations: number,
-  // 所选的组合数
-  checkedCombinations: number,
-  // 1倍花费
-  cost: number,
-  // 中奖概率
-  winPrizeRatio: string,
-  // 盈利组合数
-  profitCombinations: number,
-  // 亏损组合数
-  lossCombinations: number,
-  // 盈利概率
-  profitRatio: string,
-  // 盈亏比例
-  profitRatioLoss: string
-}>
+type ResultRow = Mix.ResultRow
+type Column = Mix.Column
+type Row = Mix.Row
+type Status = Mix.Status
 
 const Tie = defineComponent({
   setup() {
@@ -114,7 +81,9 @@ const Tie = defineComponent({
         const principal = products.length * 2
         const result: Row = {
           bonus: Number(bonus.toFixed(2)),
-          profit: Number((bonus - principal).toFixed(2))
+          bonusRatio: percentage(bonus / principal),
+          profit: Number((bonus - principal).toFixed(2)),
+          profitRatio: percentage((bonus - principal) / principal),
         }
         product.forEach((value, index) => {
           // @ts-ignore
@@ -224,6 +193,18 @@ const Tie = defineComponent({
               v-slots={{
                 default: (scope: any) =>
                   <span style={{ color: scope.row.profit > 0 ? 'red' : 'green' }}>{scope.row.profit}</span>
+              }}
+            >
+            </el-table-column>
+            <el-table-column
+              sortable
+              sort-method={(a: Row, b: Row) => a.profit - b.profit}
+              label="盈亏率"
+              width="180"
+              align="center"
+              v-slots={{
+                default: (scope: any) =>
+                  <span style={{ color: scope.row.profit > 0 ? 'red' : 'green' }}>{scope.row.profitRatio}</span>
               }}
             >
             </el-table-column>

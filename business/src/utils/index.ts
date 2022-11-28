@@ -4,7 +4,12 @@ export function percentage(ratio: number): string {
   return `${ratioStr}%`
 }
 
+export function formatFloat(number: number): number {
+  return Number(number.toFixed(2))
+}
+
 export default {
+  formatFloat,
   percentage
 }
 
