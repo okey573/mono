@@ -113,8 +113,8 @@ const Tie = defineComponent({
         const bonus: number = product.reduce((previousValue, currentValue) => previousValue * currentValue.odds, 1) * 2
         const principal = products.length * 2
         const result: Row = {
-          bonus,
-          profit: bonus - principal
+          bonus: Number(bonus.toFixed(2)),
+          profit: Number((bonus - principal).toFixed(2))
         }
         product.forEach((value, index) => {
           // @ts-ignore
@@ -212,14 +212,14 @@ const Tie = defineComponent({
               label="奖金"
               width="180"
               align="center"
-              formatter={(row: Row) => row.bonus.toFixed(2)} />
+              prop="bonus" />
             <el-table-column
               label="盈亏"
               width="180"
               align="center"
               v-slots={{
                 default: (scope: any) =>
-                  <span style={{ color: scope.row.profit > 0 ? 'red' : 'green' }}>{scope.row.profit.toFixed(2)}</span>
+                  <span style={{ color: scope.row.profit > 0 ? 'red' : 'green' }}>{scope.row.profit}</span>
               }}
             >
             </el-table-column>
