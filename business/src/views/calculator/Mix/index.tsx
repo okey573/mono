@@ -202,6 +202,7 @@ const Tie = defineComponent({
             {
               gamesColumns.value.map((item, index) =>
                 <el-table-column
+                  sortable
                   label={item.label}
                   prop={item.prop}
                   min-width="200"
@@ -209,11 +210,14 @@ const Tie = defineComponent({
                 />)
             }
             <el-table-column
+              sortable
               label="奖金"
               width="180"
               align="center"
               prop="bonus" />
             <el-table-column
+              sortable
+              sort-method={(a: Row, b: Row) => a.profit - b.profit}
               label="盈亏"
               width="180"
               align="center"
