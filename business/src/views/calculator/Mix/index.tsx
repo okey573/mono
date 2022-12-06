@@ -10,7 +10,7 @@ type Column = Mix.Column
 type Row = Mix.Row
 type Status = Mix.Status
 
-const Tie = defineComponent({
+const Mix = defineComponent({
   setup() {
     const gameRef = ref()
     const type = ref<string>('')
@@ -105,7 +105,7 @@ const Tie = defineComponent({
             base = 21
             break
           case '总进球':
-            base = 10
+            base = 8
             break
           case '半全场':
             base = 9
@@ -256,4 +256,4 @@ const Tie = defineComponent({
   }
 })
 
-export default Tie
+export default Mix
